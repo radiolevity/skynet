@@ -1,4 +1,4 @@
-# skynet
+# Skynet
 
 ## Project setup
 ```
