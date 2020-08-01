@@ -1,5 +1,5 @@
 <template>
-  <b-navbar>
+  <b-navbar spaced="true">
     <template slot="brand">
       <b-navbar-item>
         <img src="@/assets/logo.png" />
@@ -20,7 +20,6 @@
         <b-navbar-item href="#">Authorship Policy</b-navbar-item>
       </b-navbar-dropdown>
     </template>
-
     <template slot="end">
       <b-navbar-item tag="div">
         <div class="buttons">

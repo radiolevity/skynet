@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <Navbar />
+    <div id="not-footer">
+      <Navbar />
+    </div>
+    <Footer id="footer" />
   </div>
 </template>
 
@@ -8,11 +11,12 @@
   import { Component, Vue } from "vue-property-decorator";
   import HelloWorld from "./components/HelloWorld.vue";
   import Navbar from "./components/Navbar.vue";
+  import Footer from "./components/Footer.vue";
 
   @Component({
     components: {
       Navbar,
-      HelloWorld
+      Footer
     }
   })
   export default class App extends Vue {}
@@ -25,8 +29,18 @@
   @import "~buefy/src/scss/buefy";
 
   #app {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Iosevka Sparkle", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  #not-footer {
+    flex: 1 0 auto;
+  }
+  #footer {
+    flex-shrink: 0;
   }
 </style>
