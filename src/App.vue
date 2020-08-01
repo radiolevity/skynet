@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <Navbar />
   </div>
 </template>
 
 <script lang="ts">
   import { Component, Vue } from "vue-property-decorator";
   import HelloWorld from "./components/HelloWorld.vue";
+  import Navbar from "./components/Navbar.vue";
 
   @Component({
     components: {
+      Navbar,
       HelloWorld
     }
   })
@@ -18,10 +19,14 @@
 </script>
 
 <style lang="scss">
+  @import "scss/_variables.scss";
+  // Import Bulma and Buefy styles
+  @import "~bulma";
+  @import "~buefy/src/scss/buefy";
+
   #app {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #333;
   }
 </style>
